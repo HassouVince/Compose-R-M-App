@@ -1,0 +1,14 @@
+query GetAllCharacters($page : Int!, $gender : String, $status: String){
+    characters(page: $page, filter:{gender: $gender,status: $status}){
+        info {
+            next
+        }
+        results {
+            id,
+            name,
+            image,
+            gender,
+            status
+        }
+    }
+}
